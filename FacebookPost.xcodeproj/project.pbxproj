@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		200A9A8323053AD4004AB395 /* UnderLinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200A9A8223053AD4004AB395 /* UnderLinedLabel.swift */; };
+		20CC1B4922F664EE00DCFC68 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC1B4822F664EE00DCFC68 /* PostViewModel.swift */; };
+		20D63BF622FE88990098E52A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D63BF522FE88990098E52A /* UIView+Extensions.swift */; };
+		20F6619022F4B5E000C07DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6618F22F4B5E000C07DDC /* AppDelegate.swift */; };
+		20F6619222F4B5E000C07DDC /* CreatePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6619122F4B5E000C07DDC /* CreatePostsViewController.swift */; };
+		20F6619522F4B5E000C07DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F6619322F4B5E000C07DDC /* Main.storyboard */; };
+		20F6619822F4B5E000C07DDC /* FacebookPost.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20F6619622F4B5E000C07DDC /* FacebookPost.xcdatamodeld */; };
+		20F6619A22F4B5E100C07DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F6619922F4B5E100C07DDC /* Assets.xcassets */; };
+		20F6619D22F4B5E100C07DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F6619B22F4B5E100C07DDC /* LaunchScreen.storyboard */; };
+		20F661AA22F4D02B00C07DDC /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F661A822F4D02B00C07DDC /* PostCell.swift */; };
+		20F661AB22F4D02B00C07DDC /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F661A922F4D02B00C07DDC /* PostCell.xib */; };
+		20F661AE22F4D06700C07DDC /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F661AD22F4D06700C07DDC /* OptionsTableViewController.swift */; };
+		20F661B022F4D0C100C07DDC /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F661AF22F4D0C100C07DDC /* PostsViewController.swift */; };
+		20F661B322F4E31300C07DDC /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F661B122F4E31200C07DDC /* Post+CoreDataClass.swift */; };
+		20F661B422F4E31300C07DDC /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F661B222F4E31300C07DDC /* Post+CoreDataProperties.swift */; };
+		8487ACDD22FC0CF900EB1D12 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487ACDC22FC0CF900EB1D12 /* ContainerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		200A9A8223053AD4004AB395 /* UnderLinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedLabel.swift; sourceTree = "<group>"; };
+		20CC1B4822F664EE00DCFC68 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		20D63BF522FE88990098E52A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		20F6618C22F4B5E000C07DDC /* FacebookPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F6618F22F4B5E000C07DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20F6619122F4B5E000C07DDC /* CreatePostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostsViewController.swift; sourceTree = "<group>"; };
+		20F6619422F4B5E000C07DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20F6619722F4B5E000C07DDC /* FacebookPost.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FacebookPost.xcdatamodel; sourceTree = "<group>"; };
+		20F6619922F4B5E100C07DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20F6619C22F4B5E100C07DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20F6619E22F4B5E100C07DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20F661A822F4D02B00C07DDC /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = FacebookPost/Cells/PostCell.swift; sourceTree = SOURCE_ROOT; };
+		20F661A922F4D02B00C07DDC /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PostCell.xib; path = FacebookPost/Cells/PostCell.xib; sourceTree = SOURCE_ROOT; };
+		20F661AD22F4D06700C07DDC /* OptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
+		20F661AF22F4D0C100C07DDC /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		20F661B122F4E31200C07DDC /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20F661B222F4E31300C07DDC /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8487ACDC22FC0CF900EB1D12 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20F6618922F4B5E000C07DDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20CC1B4722F664C500DCFC68 /* PostViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				20CC1B4822F664EE00DCFC68 /* PostViewModel.swift */,
+			);
+			path = PostViewModel;
+			sourceTree = "<group>";
+		};
+		20D63BF722FE88A60098E52A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				20D63BF522FE88990098E52A /* UIView+Extensions.swift */,
+				200A9A8223053AD4004AB395 /* UnderLinedLabel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		20F6618322F4B5E000C07DDC = {
+			isa = PBXGroup;
+			children = (
+				20F6618E22F4B5E000C07DDC /* FacebookPost */,
+				20F6618D22F4B5E000C07DDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20F6618D22F4B5E000C07DDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20F6618C22F4B5E000C07DDC /* FacebookPost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20F6618E22F4B5E000C07DDC /* FacebookPost */ = {
+			isa = PBXGroup;
+			children = (
+				20D63BF722FE88A60098E52A /* Extensions */,
+				20CC1B4722F664C500DCFC68 /* PostViewModel */,
+				20F661A722F4B73700C07DDC /* Controllers */,
+				20F661A622F4B70D00C07DDC /* Model */,
+				20F661A422F4B6F700C07DDC /* View */,
+				20F661AC22F4D03400C07DDC /* Cells */,
+				20F6618F22F4B5E000C07DDC /* AppDelegate.swift */,
+				20F6619922F4B5E100C07DDC /* Assets.xcassets */,
+				20F6619E22F4B5E100C07DDC /* Info.plist */,
+				20F6619622F4B5E000C07DDC /* FacebookPost.xcdatamodeld */,
+			);
+			path = FacebookPost;
+			sourceTree = "<group>";
+		};
+		20F661A422F4B6F700C07DDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20F6619322F4B5E000C07DDC /* Main.storyboard */,
+				20F6619B22F4B5E100C07DDC /* LaunchScreen.storyboard */,
+				8487ACDC22FC0CF900EB1D12 /* ContainerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20F661A622F4B70D00C07DDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20F661B122F4E31200C07DDC /* Post+CoreDataClass.swift */,
+				20F661B222F4E31300C07DDC /* Post+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20F661A722F4B73700C07DDC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20F6619122F4B5E000C07DDC /* CreatePostsViewController.swift */,
+				20F661AD22F4D06700C07DDC /* OptionsTableViewController.swift */,
+				20F661AF22F4D0C100C07DDC /* PostsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		20F661AC22F4D03400C07DDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				20F661A822F4D02B00C07DDC /* PostCell.swift */,
+				20F661A922F4D02B00C07DDC /* PostCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20F6618B22F4B5E000C07DDC /* FacebookPost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20F661A122F4B5E200C07DDC /* Build configuration list for PBXNativeTarget "FacebookPost" */;
+			buildPhases = (
+				20F6618822F4B5E000C07DDC /* Sources */,
+				20F6618922F4B5E000C07DDC /* Frameworks */,
+				20F6618A22F4B5E000C07DDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FacebookPost;
+			productName = FacebookPost;
+			productReference = 20F6618C22F4B5E000C07DDC /* FacebookPost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20F6618422F4B5E000C07DDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = Crypto;
+				TargetAttributes = {
+					20F6618B22F4B5E000C07DDC = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 20F6618722F4B5E000C07DDC /* Build configuration list for PBXProject "FacebookPost" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20F6618322F4B5E000C07DDC;
+			productRefGroup = 20F6618D22F4B5E000C07DDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20F6618B22F4B5E000C07DDC /* FacebookPost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20F6618A22F4B5E000C07DDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20F6619D22F4B5E100C07DDC /* LaunchScreen.storyboard in Resources */,
+				20F6619A22F4B5E100C07DDC /* Assets.xcassets in Resources */,
+				20F6619522F4B5E000C07DDC /* Main.storyboard in Resources */,
+				20F661AB22F4D02B00C07DDC /* PostCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20F6618822F4B5E000C07DDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8487ACDD22FC0CF900EB1D12 /* ContainerView.swift in Sources */,
+				20F661B022F4D0C100C07DDC /* PostsViewController.swift in Sources */,
+				20F661B422F4E31300C07DDC /* Post+CoreDataProperties.swift in Sources */,
+				20F661B322F4E31300C07DDC /* Post+CoreDataClass.swift in Sources */,
+				20F661AE22F4D06700C07DDC /* OptionsTableViewController.swift in Sources */,
+				20F6619222F4B5E000C07DDC /* CreatePostsViewController.swift in Sources */,
+				200A9A8323053AD4004AB395 /* UnderLinedLabel.swift in Sources */,
+				20F6619822F4B5E000C07DDC /* FacebookPost.xcdatamodeld in Sources */,
+				20CC1B4922F664EE00DCFC68 /* PostViewModel.swift in Sources */,
+				20F6619022F4B5E000C07DDC /* AppDelegate.swift in Sources */,
+				20F661AA22F4D02B00C07DDC /* PostCell.swift in Sources */,
+				20D63BF622FE88990098E52A /* UIView+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20F6619322F4B5E000C07DDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20F6619422F4B5E000C07DDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20F6619B22F4B5E100C07DDC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20F6619C22F4B5E100C07DDC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20F6619F22F4B5E100C07DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20F661A022F4B5E100C07DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20F661A222F4B5E200C07DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GY6SSRWWX;
+				INFOPLIST_FILE = FacebookPost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Crypto.FacebookPost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		20F661A322F4B5E200C07DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GY6SSRWWX;
+				INFOPLIST_FILE = FacebookPost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Crypto.FacebookPost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20F6618722F4B5E000C07DDC /* Build configuration list for PBXProject "FacebookPost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20F6619F22F4B5E100C07DDC /* Debug */,
+				20F661A022F4B5E100C07DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20F661A122F4B5E200C07DDC /* Build configuration list for PBXNativeTarget "FacebookPost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20F661A222F4B5E200C07DDC /* Debug */,
+				20F661A322F4B5E200C07DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		20F6619622F4B5E000C07DDC /* FacebookPost.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				20F6619722F4B5E000C07DDC /* FacebookPost.xcdatamodel */,
+			);
+			currentVersion = 20F6619722F4B5E000C07DDC /* FacebookPost.xcdatamodel */;
+			path = FacebookPost.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 20F6618422F4B5E000C07DDC /* Project object */;
+}
