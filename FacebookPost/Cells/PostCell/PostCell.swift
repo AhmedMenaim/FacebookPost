@@ -16,7 +16,8 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var lblPosttext: UILabel!
     @IBOutlet weak var postedImage: UIImageView!
     weak var delegate: OptionsViewDelegate?
-    
+    weak var delegatee: PostDelegate?
+    var post: Post?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,5 +34,15 @@ class PostCell: UITableViewCell {
         
         profileImageOutlett.cornerRadius = profileImageOutlett.frame.height / 2
     }
+    
+    @IBAction func buttonCommentPressedAction(_ sender: Any) {
+        
+        delegatee?.didOpenComment(post: self.post!)
+        
+        
+    }
 }
 
+protocol PostDelegate: class {
+    func didOpenComment(post: Post)
+}

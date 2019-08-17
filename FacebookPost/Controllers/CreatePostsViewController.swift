@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CreatePostsViewController: UIViewController {
+class CreatePostsViewController: UIViewController, UITextViewDelegate {
     
     
     var viewModel: PostViewModel?
@@ -19,13 +19,15 @@ class CreatePostsViewController: UIViewController {
     @IBOutlet weak var imageWillbePostedOutlet: UIImageView!
     
     
+    
     var containerViewController: OptionsTableViewController?
     let containerSegueName = "OptionsContainerView"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       postTextView.text = "What's on your mind ?"
+        postTextView.textColor = UIColor.lightGray
         self.title = "Create Post"
          profileImageViewOutlet.cornerRadius = profileImageViewOutlet.frame.height / 2
         
@@ -51,7 +53,19 @@ class CreatePostsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "What's on your mind ?"
+            textView.textColor = UIColor.lightGray
+        }
+    }
 
 }
 

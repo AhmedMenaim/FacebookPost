@@ -39,12 +39,15 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's on your mind ?" translatesAutoresizingMaskIntoConstraints="NO" id="L7O-1X-0sX">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7O-1X-0sX">
                                                         <rect key="frame" x="0.0" y="81" width="414" height="290"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="yb9-yc-elh"/>
+                                                        </connections>
                                                     </textView>
                                                 </subviews>
                                                 <constraints>
@@ -474,6 +477,65 @@
             </objects>
             <point key="canvasLocation" x="846" y="122"/>
         </scene>
+        <!--Comments View Controller-->
+        <scene sceneID="U7S-Pk-9IW">
+            <objects>
+                <viewController storyboardIdentifier="CommentsViewController" id="NhS-nZ-oD2" customClass="CommentsViewController" customModule="FacebookPost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kXw-jd-n4F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Re-ah-FEL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="778"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NhS-nZ-oD2" id="CPy-pM-xX7"/>
+                                    <outlet property="delegate" destination="NhS-nZ-oD2" id="93b-CJ-C7Z"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obm-a1-yCa">
+                                <rect key="frame" x="0.0" y="822" width="360" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="K4s-fO-YXM"/>
+                                    <constraint firstAttribute="height" constant="40" id="uUk-XM-usP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgC-Bj-vnW">
+                                <rect key="frame" x="360" y="822" width="54" height="40"/>
+                                <state key="normal" image="commentArrow"/>
+                                <connections>
+                                    <action selector="buttonCommentAction:" destination="NhS-nZ-oD2" eventType="touchUpInside" id="hHQ-OB-XSQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Re-ah-FEL" firstAttribute="leading" secondItem="Ygd-Dd-Oaq" secondAttribute="leading" id="04u-Xd-kUV"/>
+                            <constraint firstItem="Obm-a1-yCa" firstAttribute="top" secondItem="8Re-ah-FEL" secondAttribute="bottom" id="4m0-ya-b7G"/>
+                            <constraint firstItem="Ygd-Dd-Oaq" firstAttribute="trailing" secondItem="8Re-ah-FEL" secondAttribute="trailing" id="8F9-JT-apg"/>
+                            <constraint firstItem="YgC-Bj-vnW" firstAttribute="top" secondItem="8Re-ah-FEL" secondAttribute="bottom" id="9AX-aW-WRn"/>
+                            <constraint firstItem="Obm-a1-yCa" firstAttribute="leading" secondItem="Ygd-Dd-Oaq" secondAttribute="leading" id="IEh-7C-Hcf"/>
+                            <constraint firstItem="Ygd-Dd-Oaq" firstAttribute="bottom" secondItem="Obm-a1-yCa" secondAttribute="bottom" id="KSZ-Oq-FdC"/>
+                            <constraint firstItem="Ygd-Dd-Oaq" firstAttribute="bottom" secondItem="YgC-Bj-vnW" secondAttribute="bottom" id="P1n-26-1XW"/>
+                            <constraint firstItem="8Re-ah-FEL" firstAttribute="top" secondItem="Ygd-Dd-Oaq" secondAttribute="top" id="jVx-7w-aQq"/>
+                            <constraint firstItem="YgC-Bj-vnW" firstAttribute="leading" secondItem="Obm-a1-yCa" secondAttribute="trailing" id="pmm-X4-FVk"/>
+                            <constraint firstItem="Ygd-Dd-Oaq" firstAttribute="trailing" secondItem="YgC-Bj-vnW" secondAttribute="trailing" id="x1i-nn-o5g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ygd-Dd-Oaq"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonComment" destination="YgC-Bj-vnW" id="c7H-S0-auJ"/>
+                        <outlet property="commentsTableView" destination="8Re-ah-FEL" id="rLl-cz-21J"/>
+                        <outlet property="textFieldComment" destination="Obm-a1-yCa" id="Ir1-kB-A5y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FmU-ow-MWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860.86956521739137" y="660.9375"/>
+        </scene>
         <!--Posts View Controller-->
         <scene sceneID="xTf-hA-chx">
             <objects>
@@ -530,5 +592,6 @@
     </scenes>
     <resources>
         <image name="Image" width="864" height="864"/>
+        <image name="commentArrow" width="50" height="50"/>
     </resources>
 </document>

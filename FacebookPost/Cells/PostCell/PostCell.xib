@@ -59,6 +59,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcG-MC-dGr">
                                 <rect key="frame" x="130" y="0.0" width="130" height="59"/>
                                 <state key="normal" title="Comment"/>
+                                <connections>
+                                    <action selector="buttonCommentPressedAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iEH-zm-VfW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3U8-Mx-Cix">
                                 <rect key="frame" x="260" y="0.0" width="130" height="59"/>

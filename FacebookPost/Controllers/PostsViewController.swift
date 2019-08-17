@@ -66,7 +66,8 @@ extension PostsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.lblPosttext.text = post.body
         cell.lblUserName.text = post.name
         cell.postDate.text = post.date
-        
+        cell.post = post
+        cell.delegatee = self
         return cell
     }
     
@@ -75,7 +76,7 @@ extension PostsViewController: UITableViewDataSource, UITableViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        viewModel.fetchDate()
+        viewModel.fetchPost()
         postsTableView.reloadData()
         
         
@@ -84,6 +85,23 @@ extension PostsViewController: UITableViewDataSource, UITableViewDelegate {
 
     
 
+}
+
+extension PostsViewController: PostDelegate {
+    func didOpenComment(post: Post) {
+        
+        let commentsViewController = self.storyboard?.instantiateViewController(withIdentifier: "CommentsViewController") as! CommentsViewController
+        viewModel.post = post
+        
+        if let postComments = post.comment?.allObjects {
+            viewModel.comments = postComments as! [Comment]
+        }
+        commentsViewController.viewModel = viewModel
+        self.navigationController?.pushViewController(commentsViewController, animated: true)
+        
+    }
+    
+    
 }
 
 

@@ -1,5 +1,5 @@
 //
-//  Post+CoreDataClass.swift
+//  Comment+CoreDataClass.swift
 //  FacebookPost
 //
 //  Created by Crypto on 8/17/19.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Post)
-public class Post: NSManagedObject {
+@objc(Comment)
+public class Comment: NSManagedObject {
 
 }
